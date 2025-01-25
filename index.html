@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szczotka do prostowania włosów LCD 160-200°C</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        h2, h3 {
+            text-align: left;
+            color: #ffcc00;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .slider-container {
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-image {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .arrow-left, .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 36px;
+            color: white;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+        .arrow-left:hover, .arrow-right:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .slider-container {
+            width: 520px;
+            margin-right: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product-info {
+            width: 48%;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .pricing {
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            margin-right: 10px;
+            color: #999;
+        }
+
+        .discount-price {
+            color: #ffcc00;
+            font-size: 28px;
+        }
+
+        .buy-button {
+            background-color: #ffcc00;
+            color: black;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buy-button:hover {
+            background-color: #e6b800;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .features li:before {
+            content: "✨ ";
+            color: #ffcc00;
+        }
+
+        .specifications {
+            margin-top: 40px;
+            width: 70%;
+            margin: 40px auto;
+        }
+
+        .specifications table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #333;
+            font-size: 11px;
+        }
+
+        .specifications th, .specifications td {
+            padding: 5px;
+            border: 1px solid #fff;
+            text-align: left;
+        }
+
+        .specifications th {
+            background-color: #444;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .specifications td {
+            background-color: #555;
+            color: #ddd;
+        }
+
+        .specifications tr:nth-child(even) td {
+            background-color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-info {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .slider-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .pricing {
+                text-align: center;
+            }
+
+            .buy-button {
+                width: auto;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Szczotka do prostowania włosów LCD 160-200°C ceramiczna z funkcją jonizacji</h1>
+
+    <div class="container">
+        <div class="slider-container">
+            <img src="1.jpg" alt="Szczotka do prostowania włosów" class="slider-image" id="sliderImage">
+            <span class="arrow-left" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="arrow-right" onclick="moveSlide(1)">&#10095;</span>
+        </div>
+
+        <div class="product-info">
+            <h2>Opis produktu</h2>
+            <p>Prostownica do włosów LCD 160-200°C ceramiczna z funkcją jonizacji to idealne narzędzie do uzyskania gładkich, prostych włosów. Zastosowanie nowoczesnej technologii i łatwa obsługa sprawiają, że jest to must-have każdego dnia!</p>
+
+            <div class="features">
+                <h2>Cechy produktu</h2>
+                <ul>
+                    <li>✨ Szybkie nagrzewanie - osiąga idealną temperaturę w 30 sekund.</li>
+                    <li>✨ Regulowana kontrola ogrzewania - 3 poziomy temperatury (160°C, 180°C, 200°C).</li>
+                    <li>✨ Zaawansowana technologia jonowa - walczy z puszeniem się i elektryzowaniem włosów.</li>
+                    <li>✨ Długa żywotność baterii - 2000 mAh, 45 minut użytkowania po pełnym naładowaniu.</li>
+                    <li>✨ Przenośna i lekka - idealna do podróży.</li>
+                </ul>
+            </div>
+
+            <div class="box-contents">
+                <h2>Zawartość pudełka:</h2>
+                <ul>
+                    <li>1 x Szczotka do prostowania włosów</li>
+                    <li>1 x Grzebień</li>
+                    <li>1 x Kabel USB</li>
+                    <li>2 x Klipsy</li>
+                </ul>
+            </div>
+
+            <div class="pricing">
+                <span class="original-price">249,99 zł</span>
+                <span class="discount-price">149,99 zł</span>
+            </div>
+
+            <!-- Przycisk Kup teraz -->
+            <div class="buy-button-container">
+                <!-- Link otaczający przycisk -->
+                <a href="https://buy.stripe.com/7sIcQJ9eR4nb0RqdQT" target="_blank">
+                    <button class="buy-button">Kup teraz</button>
+                </a>
+            </div>
+
+            <div class="shipping-info">
+                <p><strong>Wysyłka: </strong>od 2 do 3 dni roboczych.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="specifications">
+        <h2>Specyfikacja</h2>
+        <table>
+            <tr>
+                <th>Materiał termoprzewodzący</th>
+                <td>Ceramika</td>
+            </tr>
+            <tr>
+                <th>Rozmiar produktu</th>
+                <td>20x4.5x3 cm</td>
+            </tr>
+            <tr>
+                <th>Nominalna moc robocza</th>
+                <td>35W</td>
+            </tr>
+            <tr>
+                <th>Napięcie znamionowe</th>
+                <td>7,4 V</td>
+            </tr>
+            <tr>
+                <th>Pojemność baterii</th>
+                <td>2000 mAh</td>
+            </tr>
+            <tr>
+                <th>Częstotliwość znamionowa</th>
+                <td>50 Hz</td>
+            </tr>
+            <tr>
+                <th>Temperatura ogrzewania</th>
+                <td>160-200°C</td>
+            </tr>
+            <tr>
+                <th>Kontrola temperatury</th>
+                <td>3 poziomy</td>
+            </tr>
+            <tr>
+                <th>Żywotność baterii</th>
+                <td>45 minut</td>
+            </tr>
+            <tr>
+                <th>Czas ładowania</th>
+                <td>3 godziny</td>
+            </tr>
+            <tr>
+                <th>Metoda ładowania</th>
+                <td>Typ C</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>⚡️ Ładowanie przez USB, szybkie i wygodne użytkowanie w każdym miejscu.</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        const images = [
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg"
+        ];
+
+        const sliderImage = document.getElementById('sliderImage');
+
+        function moveSlide(step) {
+            currentSlide += step;
+            if (currentSlide < 0) {
+                currentSlide = images.length - 1;
+            } else if (currentSlide >= images.length) {
+                currentSlide = 0;
+            }
+            sliderImage.src = images[currentSlide];
+        }
+    </script>
+
+</body>
+</html>
